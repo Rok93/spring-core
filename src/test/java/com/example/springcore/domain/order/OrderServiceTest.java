@@ -1,5 +1,6 @@
 package com.example.springcore.domain.order;
 
+import com.example.springcore.domain.discount.RateDiscountPolicy;
 import com.example.springcore.domain.member.Grade;
 import com.example.springcore.domain.member.Member;
 import com.example.springcore.domain.member.MemberService;
@@ -11,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class OrderServiceTest {
 
     private MemberService memberService = new MemberServiceImpl();
-    private OrderService orderService = new OrderServiceImpl();
+    private OrderService orderService = new OrderServiceImpl(new RateDiscountPolicy());
 
     @Test
     void createOrder() {
