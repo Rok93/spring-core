@@ -3,12 +3,12 @@ package com.example.springcore;
 import com.example.springcore.domain.member.Grade;
 import com.example.springcore.domain.member.Member;
 import com.example.springcore.domain.member.MemberService;
-import com.example.springcore.domain.member.MemberServiceImpl;
 
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
