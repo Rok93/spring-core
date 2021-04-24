@@ -3,7 +3,6 @@ package com.example.springcore.domain.order;
 import com.example.springcore.domain.discount.DiscountPolicy;
 import com.example.springcore.domain.member.Member;
 import com.example.springcore.domain.member.MemberRepository;
-import com.example.springcore.domain.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
 
